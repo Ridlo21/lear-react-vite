@@ -29,6 +29,10 @@ export default function App() {
 
         socket.on('mod_forecast', data => {
             console.log(data);
+            let chatList = document.createElement('p')
+            chatList.style.fontSize = '16px'
+            chatList.textContent = data
+            messageList.appendChild(chatList)
         })
     }, [])
 
